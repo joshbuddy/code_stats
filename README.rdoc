@@ -1,0 +1,21 @@
+= Code Stats
+
+== Usage
+
+In your Rakefile, add 
+
+  CodeStats::Tasks.new
+  
+And you get:
+
+  Summary
+                                                                      154 Lines
+                                                                      123 Code
+                                                                        0 Comments
+                                                                     0.00 Comments to code %
+                                                                       31 Empty
+
+=== Options
+
+* <tt>directories</tt>: Takes an array of directories to report on. (default: 'lib')
+* <tt>reporting_depth</tt>: Depth of subdirectories to report on. 0 is summary mode. (Default: 0)
