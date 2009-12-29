@@ -4,7 +4,7 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
     s.name = "code_stats"
-    s.description = s.summary = "Code statistics for your rakefile"
+    s.description = s.summary = "Brief code stats from your rakefile"
     s.email = "joshbuddy@gmail.com"
     s.homepage = "http://github.com/joshbuddy/code_stats"
     s.authors = ["Joshua Hull"]
