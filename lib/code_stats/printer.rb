@@ -14,7 +14,7 @@ class CodeStats
           puts "Depth #{depth}"
           puts ""
           depth_reports[depth].each do |dir, report|
-            report(dir, report)
+            report(dir.join(File::SEPARATOR), report)
           end
         end
         puts ""
@@ -27,7 +27,7 @@ class CodeStats
       puts "%-60s %10s %10s" % [label, report.lines, "Lines".color(:red)]
       puts "%-60s %10s %10s" % ['', report.code, "Code".color(:blue)]
       puts "%-60s %10s %10s" % ['', report.comments, "Comments".color(:green)]
-      puts "%-60s %10.2f %10s" % ['', report.comments.to_f / report.code, "Comments to code %"] unless report.code.zero?
+      puts "%-60s %10.2f %10s" % ['', (report.comments.to_f / report.code) * 100, "Comments to code %"] unless report.code.zero?
       puts "%-60s %10s %10s" % ['', report.empty, "Empty".color(:magenta)]
     end
 
