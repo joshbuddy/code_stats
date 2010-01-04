@@ -4,7 +4,12 @@
 
 In your Rakefile, add 
 
-  CodeStats::Tasks.new
+  begin
+    require 'code_stats'
+    CodeStats::Tasks.new
+  rescue LoadError
+    puts "Code Stats not available, install it with gem install code_stats"
+  end
   
 And you get:
 
